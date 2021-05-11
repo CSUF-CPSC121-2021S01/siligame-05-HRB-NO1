@@ -32,7 +32,7 @@ class GameElement {
 
   virtual void Move(const graphics::Image &screen) = 0;
 
-  bool IntersectsWith(GameElement &gameElement);
+  bool IntersectsWith(GameElement *gameElement);
 
   bool IsOutOfBounds(const graphics::Image &screen);
 
