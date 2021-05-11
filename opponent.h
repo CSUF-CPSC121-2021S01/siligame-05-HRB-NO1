@@ -14,8 +14,10 @@ class OpponentProjectile : public GameElement {
   void Draw(graphics::Image &screen);
 
   void Move(const graphics::Image &screen);
+// new add
 
  private:
+
   void PadPoints(std::vector<int> &points, int pad_x, int pad_y);
 
   const graphics::Color kOrange{255, 165, 0};
@@ -29,9 +31,21 @@ class Opponent : public GameElement {
 
   void Draw(graphics::Image &screen);
 
+  std::unique_ptr<OpponentProjectile> LaunchProjectile() {
+    std::unique_ptr<OpponentProjectile> OpponentProjectileFactory = std::make_unique<OpponentProjectile>(GetX(), GetY());
+    counter++;
+    if (counter < 10) {
+      return nullptr;// std::move
+    } else {
+      return std::move(OpponentProjectileFactory);
+    }
+  }
+
   void Move(const graphics::Image &screen);
 
  private:
+  int counter = 0;
+
   void PadPoints(std::vector<int> &points, int pad_x, int pad_y);
 
   const graphics::Color kRed{255, 0, 0};
