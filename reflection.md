@@ -1,10 +1,11 @@
 # Milestone 2
 
 ## Description
-Describe what you did for this milestone in your own words.
+I learn how to use pointer to make code looks more complex.
 
 ## Challenges encountered
-Describe the challenges you encountered while working on this milestone of the project.
+The logic of earies the end value and has_lost_ is pretty tricky.
 
 ## Things I've learned
-What is the most important thing you've learned from this milestone in the project?
+
+To use pointer to make code more efficiency(maybe).
